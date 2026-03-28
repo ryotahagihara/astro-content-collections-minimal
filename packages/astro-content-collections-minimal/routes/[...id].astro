@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages.map((page) => ({
+    params: { id: page.id === "index" ? undefined : page.id, },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    { page.id === "index" || !page.data.title
+    ? "astro-content-collections-minimal"
+    : `${page.data.title} | astro-content-collections-minimal`}
+  </title>
+</head>
+<body>
+  <Content />
+</html>

@@ -16,7 +16,10 @@
   "license": "ISC",
   "type": "module",
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./schema": "./schema.ts",
+    "./loaders": "./loaders.ts",
+    "./routes/*": "./routes/*"
   },
   "peerDependencies": {
     "astro": "^6.0.0"
