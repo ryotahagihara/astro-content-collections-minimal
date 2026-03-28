@@ -1,0 +1,17 @@
+{
+  "name": "astro-content-collections-minimal-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "astro": "^6.1.1"
+  },
+  "packageManager": "pnpm@10.32.1"
+}

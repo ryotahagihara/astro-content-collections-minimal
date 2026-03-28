@@ -1,0 +1,28 @@
+{
+  "name": "astro-content-collections-minimal",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "docs",
+    "documentation",
+    "astro",
+    "withastro",
+    "astro-integration"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "peerDependencies": {
+    "astro": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "astro": "^6.1.1"
+  }
+}
