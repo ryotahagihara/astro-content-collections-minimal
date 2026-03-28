@@ -13,7 +13,7 @@
     "astro-integration"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": "./index.ts",
