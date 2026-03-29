@@ -3,17 +3,18 @@ import { fileURLToPath } from "node:url";
 import type { AstroIntegration } from "astro";
 import { z } from "astro/zod";
 import { AstroError } from "astro/errors";
+import { vitePluginUserConfig } from "./integrations/vite-plugins";
 
 const OptionsSchema = z.object({
+  siteTitle: z.string({ error: "siteTitle is required." }),
+  siteDescription: z.string().optional(),
+  lang: z.string().default("en"),
   styles: z.string({
     error:
       "styles is required. Specify the path to your CSS entry point (e.g. './src/styles/global.css').",
   }),
 });
 type UserOptions = z.input<typeof OptionsSchema>;
-
-const VIRTUAL_STYLES_ID = "virtual:astro-content-collections-minimal/styles";
-const RESOLVED_VIRTUAL_STYLES_ID = `\0${VIRTUAL_STYLES_ID}`;
 
 export default function contentCollectionsMinimal(
   options: UserOptions,
@@ -40,23 +41,14 @@ export default function contentCollectionsMinimal(
 
         updateConfig({
           vite: {
-            plugins: [
-              {
-                name: "vite-plugin-user-styles",
-                resolveId(id: string) {
-                  if (id === VIRTUAL_STYLES_ID) {
-                    return RESOLVED_VIRTUAL_STYLES_ID;
-                  }
-                  return undefined;
-                },
-                load(id: string) {
-                  if (id === RESOLVED_VIRTUAL_STYLES_ID) {
-                    return `import "${userStylesPath}";`;
-                  }
-                  return undefined;
-                },
+            plugins: vitePluginUserConfig({
+              config: {
+                siteTitle: parsed.siteTitle,
+                siteDescription: parsed.siteDescription,
+                lang: parsed.lang,
               },
-            ],
+              userStylesPath,
+            }),
           },
         });
 

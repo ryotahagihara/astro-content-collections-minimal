@@ -1,12 +1,13 @@
 ---
-
+import config from "virtual:astro-content-collections-minimal/config";
+const { siteTitle } = config;
 ---
 
 <header>
   <div class="flex flex-wrap items-center justify-between">
     <div>
       <a href="/">
-        <h1>astro-content-collections-minimal</h1>
+        <h1>{siteTitle}</h1>
       </a>
     </div>
     <div>
