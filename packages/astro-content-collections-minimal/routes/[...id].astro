@@ -1,7 +1,8 @@
 ---
 import { getCollection, render } from "astro:content";
 
-import Layout from "../components/Layout.astro";
+import config from "virtual:astro-content-collections-minimal/config";
+import Layout from "virtual:astro-content-collections-minimal/components/Layout";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -11,13 +12,15 @@ export async function getStaticPaths() {
   }));
 }
 
+const { siteTitle } = config;
+
 const { page } = Astro.props;
 const { Content } = await render(page);
 
 const pageTitle =
   page.id === "index" || !page.data.title
-    ? "astro-content-collections-minimal"
-    : `${page.data.title} | astro-content-collections-minimal`;
+    ? siteTitle
+    : `${page.data.title} | ${siteTitle}`;
 ---
 
 <Layout title={pageTitle}>
