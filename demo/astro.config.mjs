@@ -8,8 +8,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   integrations: [
     contentCollectionsMinimal({
-      siteTitle: "astro-content-collections-minimal",
+      siteTitle: "My site",
       styles: "./src/styles/global.css",
+      components: {
+        Header: "./src/components/MyHeader.astro",
+        Footer: "./src/components/MyFooter.astro",
+      },
     }),
   ],
 

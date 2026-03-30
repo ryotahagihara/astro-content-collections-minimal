@@ -1,0 +1,20 @@
+---
+import config from "virtual:astro-content-collections-minimal/config";
+
+const { siteTitle } = config;
+---
+
+<header>
+  <div class="flex flex-wrap items-center justify-between">
+    <a href="/">
+      <h1>{siteTitle}</h1>
+    </a>
+    <a
+      href="https://github.com/ryotahagihara/astro-content-collections-minimal"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub
+    </a>
+  </div>
+</header>

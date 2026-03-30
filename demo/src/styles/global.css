@@ -2,5 +2,5 @@
 @plugin "@tailwindcss/typography";
 
 @theme inline {
-  /* --color-background: var(--color-amber-100); */
+  --color-background: #fff7ed;
 }

@@ -2,3 +2,5 @@
 ---
 
 # index
+
+- [test](test)
