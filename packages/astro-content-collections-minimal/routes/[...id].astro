@@ -12,7 +12,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { siteTitle } = config;
+const { siteTitle, siteDescription } = config;
 
 const { page } = Astro.props;
 const { Content } = await render(page);
@@ -21,8 +21,10 @@ const pageTitle =
   page.id === "index" || !page.data.title
     ? siteTitle
     : `${page.data.title} | ${siteTitle}`;
+
+const pageDescription = page.data.description ?? siteDescription;
 ---
 
-<Layout title={pageTitle}>
+<Layout title={pageTitle} description={pageDescription}>
   <Content />
 </Layout>

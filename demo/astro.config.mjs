@@ -9,6 +9,7 @@ export default defineConfig({
   integrations: [
     contentCollectionsMinimal({
       siteTitle: "My site",
+      siteDescription: "My description",
       styles: "./src/styles/global.css",
       components: {
         Header: "./src/components/MyHeader.astro",
