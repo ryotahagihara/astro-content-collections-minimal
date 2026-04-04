@@ -1,6 +1,6 @@
 {
   "name": "astro-content-collections-minimal",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A minimal Astro integration for building themes with Content Collections",
   "keywords": [
     "docs",
