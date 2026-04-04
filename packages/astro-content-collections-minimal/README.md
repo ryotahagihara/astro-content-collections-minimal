@@ -17,7 +17,17 @@ It uses [Tailwind CSS (v4)](https://tailwindcss.com/) and [@tailwindcss/typograp
 
 ## Installation
 
-Install the package in your Astro project that already has **Tailwind CSS (v4)** and **@tailwindcss/typography** set up.
+### Starting a new project
+
+If you are starting a new Astro project, use the official starter template. It comes with Astro, Tailwind CSS, and this package already configured.
+
+```bash
+npm create astro@latest -- --template ryotahagihara/astro-content-collections-minimal-starter
+```
+
+### Adding to an existing project
+
+You can also manually install this package into an existing Astro project. This package requires **Tailwind CSS (v4)** and **@tailwindcss/typography** for styling, so make sure they are set up in your project before installing.
 
 ```bash
 npm install astro-content-collections-minimal
@@ -167,4 +177,4 @@ Please report issues or feature requests via [GitHub Issues](https://github.com/
 
 MIT License - See [LICENSE](LICENSE) for details.
 
-Copyright &copy; 2026 [Ryota Hagihara](https://www.ryotahagihara.com/) All rights reserved.
+Copyright &copy; 2026 [Ryota Hagihara](https://www.ryotahagihara.com/)

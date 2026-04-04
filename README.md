@@ -16,6 +16,8 @@ This repository is managed as a monorepo using `pnpm workspaces`.
 
 > **Note:**
 > For detailed usage instructions and configuration options, please refer to the [package README](packages/astro-content-collections-minimal/README.md).
+> A [starter template](https://github.com/ryotahagihara/astro-content-collections-minimal-starter) is also available for getting started quickly with this package.
+> You can also check out the [demo site](https://astro-content-collections-minimal.rhghr.com/) to see it in action.
 
 ## As an Astro Integration Reference
 
@@ -76,4 +78,4 @@ Please report issues or feature requests via [GitHub Issues](https://github.com/
 
 MIT License - See [LICENSE](LICENSE) for details.
 
-Copyright &copy; 2026 [Ryota Hagihara](https://www.ryotahagihara.com/) All rights reserved.
+Copyright &copy; 2026 [Ryota Hagihara](https://www.ryotahagihara.com/)
