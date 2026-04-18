@@ -1,16 +1,14 @@
 {
   "name": "astro-content-collections-minimal",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A minimal Astro integration for building themes with Content Collections",
   "keywords": [
-    "docs",
-    "documentation",
     "astro",
     "withastro",
     "astro-integration"
   ],
   "license": "MIT",
-  "author": "Ryota Hagihara (https://www.ryotahagihara.com/)",
+  "author": "Ryota Hagihara",
   "exports": {
     ".": "./index.ts",
     "./schema": "./schema.ts",
