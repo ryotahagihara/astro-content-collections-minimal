@@ -16,6 +16,10 @@
     "./routes/*": "./routes/*"
   },
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryotahagihara/astro-content-collections-minimal.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
